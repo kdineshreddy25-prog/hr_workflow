@@ -1,143 +1,145 @@
-# 🧑‍💼 HR Workflow Designer
+# 🧑‍💼 HR Workflow Designer (Frontend - Vite + React + TypeScript)
 
-An interactive web-based application to design, simulate, and manage HR workflows efficiently. This tool allows users to visually create workflows, simulate processes, and analyze outcomes.
+This project is a modern frontend application for designing and simulating HR workflows. Built using **React, TypeScript, and Vite**, it provides an interactive interface for creating, managing, and visualizing workflow processes.
 
 ---
 
 ## 🚀 Features
 
-- 🎨 Workflow Builder UI  
-  Drag-and-drop interface for designing workflows with nodes like Start, Process, Decision, and End.
+* 🎨 Interactive Workflow UI
+  Create and manage HR workflows with a clean and responsive interface.
 
-- 🔄 Workflow Simulation  
-  Simulate HR processes in real-time and analyze execution paths.
+* 🔄 Workflow Simulation Integration
+  Connects with backend APIs to simulate workflows.
 
-- 📊 Dynamic Visualization  
-  Clear visual representation of workflows using flow diagrams.
+* ⚡ Fast Performance
+  Powered by Vite for lightning-fast development and build speed.
 
-- 🌐 Frontend + Backend Integration  
-  Seamless communication with backend APIs using HTTP requests.
+* 🧩 Modular Architecture
+  Organized code structure using components, services, and reusable logic.
 
 ---
 
 ## 🛠️ Tech Stack
 
-Frontend:
-- HTML
-- CSS
-- JavaScript (or Streamlit)
-
-Backend:
-- Python (Flask / FastAPI)
-- REST APIs
-
-Tools:
-- VS Code
-- Git & GitHub
+* **Frontend Framework:** React
+* **Language:** TypeScript
+* **Build Tool:** Vite
+* **State Management:** Custom store (store.ts)
+* **Styling:** CSS
 
 ---
 
 ## 📁 Project Structure
 
-HR-Workflow-Designer/  
-│── frontend/  
-│── backend/  
-│── assets/  
-│── README.md  
+```
+HR-WORKFLOW-DESIGNER/
+│── src/
+│   ├── components/     # Reusable UI components
+│   ├── lib/            # Utility functions
+│   ├── services/       # API calls and backend integration
+│   ├── App.tsx         # Main App component
+│   ├── main.tsx        # Entry point
+│   ├── store.ts        # State management
+│   ├── types.ts        # Type definitions
+│   └── index.css       # Global styles
+│
+│── index.html          # Root HTML file
+│── package.json        # Dependencies and scripts
+│── tsconfig.json       # TypeScript configuration
+│── vite.config.ts      # Vite configuration
+│── README.md           # Project documentation
+```
 
 ---
 
 ## ⚙️ Installation & Setup
 
-1. Clone the repository  
-git clone https://github.com/your-username/hr-workflow-designer.git  
-cd hr-workflow-designer  
+### 1️⃣ Clone the repository
 
-2. Backend Setup  
-cd backend  
-pip install -r requirements.txt  
-python app.py  
-
-Server runs at: http://localhost:5000  
-
-3. Frontend Setup  
-Open index.html directly or use Live Server.
+```
+git clone https://github.com/your-username/hr-workflow-designer.git
+cd hr-workflow-designer
+```
 
 ---
 
-## 🔌 API Integration Example
+### 2️⃣ Install dependencies
 
-export const simulateWorkflow = async (workflow) => {  
-  const res = await fetch("http://localhost:5000/simulate", {  
-    method: "POST",  
-    headers: {  
-      "Content-Type": "application/json"  
-    },  
-    body: JSON.stringify(workflow)  
-  });  
+```
+npm install
+```
 
-  return res.json();  
-};  
+---
+
+### 3️⃣ Run the development server
+
+```
+npm run dev
+```
+
+The app will run at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🔌 Backend Integration
+
+This frontend connects to a backend service (e.g., Flask/FastAPI).
+
+Example API call:
+
+```javascript
+export const simulateWorkflow = async (workflow) => {
+  const res = await fetch("http://localhost:5000/simulate", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(workflow)
+  });
+
+  return res.json();
+};
+```
 
 ---
 
 ## ▶️ How to Use
 
-1. Open the application  
-2. Create a workflow using UI components  
-3. Connect nodes to form a process  
-4. Click Simulate  
-5. View results  
+1. Start the frontend using `npm run dev`
+2. Ensure backend server is running (port 5000)
+3. Open the app in browser
+4. Design your workflow
+5. Run simulation and view results
 
 ---
 
-## 🧠 Use Cases
+## ⚠️ Notes
 
-- HR onboarding workflows  
-- Leave approval systems  
-- Recruitment pipelines  
-- Employee performance tracking  
-
----
-
-## ⚠️ Known Issues
-
-- Backend must be running before simulation  
-- Minor UI issues in some browsers  
+* Backend must be running for simulation features
+* Update API URLs in `services/` if needed
 
 ---
 
 ## 🔮 Future Enhancements
 
-- Authentication system (Admin/User)  
-- Advanced analytics dashboard  
-- Cloud deployment  
-- AI-based workflow suggestions  
-
----
-
-## 🤝 Contributing
-
-1. Fork the repository  
-2. Create a new branch  
-3. Commit changes  
-4. Push to GitHub  
-5. Open a Pull Request  
-
----
-
-## 📜 License
-
-MIT License  
+* Authentication system (Admin/User)
+* Drag-and-drop workflow builder
+* Advanced analytics dashboard
+* AI-based workflow suggestions
 
 ---
 
 ## 👨‍💻 Author
 
-Dinesh Reddy  
+Dinesh Reddy
 
 ---
 
 ## ⭐ Support
 
-If you like this project, give it a star on GitHub!
+If you like this project, consider giving it a ⭐ on GitHub!
