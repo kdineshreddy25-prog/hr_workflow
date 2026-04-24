@@ -1,0 +1,6 @@
+{
+  "name": "HR Workflow Designer",
+  "description": "A visual HR workflow designer built with React Flow, featuring custom nodes, node configuration forms, and a workflow simulation engine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
